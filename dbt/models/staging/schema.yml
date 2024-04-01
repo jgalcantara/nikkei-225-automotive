@@ -1,0 +1,94 @@
+version: 2
+
+sources:
+  - name: staging
+    database: steam-form-411714
+     # For postgres:
+      #database: production
+    schema: nikkei_225_auto
+
+      # loaded_at_field: record_loaded_at
+    tables:
+      - name: ext_n225_code
+      - name: ext_n225_comp
+      - name: ext_n225_info
+
+models:
+  - name: stg_staging__ext_n225_info
+    description: ""
+    columns:
+      - name: ticker
+        data_type: int64
+        description: ""
+        tests:
+          - not_null
+
+      - name: shares
+        data_type: int64
+        description: ""
+        tests:
+          - not_null
+
+  - name: stg_staging__ext_n225_comp
+    description: ""
+    columns:
+      - name: date
+        data_type: date
+        description: ""
+
+      - name: open
+        data_type: float64
+        description: ""
+        tests:
+          - not_null
+
+      - name: high
+        data_type: float64
+        description: ""
+        tests:
+          - not_null
+
+      - name: low
+        data_type: float64
+        description: ""
+        tests:
+          - not_null
+
+      - name: close
+        data_type: float64
+        description: ""
+        tests:
+          - not_null
+
+      - name: adj_close
+        data_type: float64
+        description: ""
+        tests:
+          - not_null
+
+      - name: volume
+        data_type: int64
+        description: ""
+        tests:
+          - not_null
+
+      - name: ticker
+        data_type: int64
+        description: ""
+        tests:
+          - not_null
+
+  - name: stg_staging__ext_n225_code
+    description: ""
+    columns:
+      - name: ticker
+        data_type: int64
+        description: ""
+        tests:
+          - not_null
+
+      - name: company
+        data_type: string
+        description: ""
+        tests:
+          - not_null
