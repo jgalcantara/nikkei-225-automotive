@@ -1,0 +1,1 @@
+# nikkei-225-automotive
