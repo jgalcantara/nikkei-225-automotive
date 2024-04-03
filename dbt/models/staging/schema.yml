@@ -2,10 +2,10 @@ version: 2
 
 sources:
   - name: staging
-    database: steam-form-411714
+    database: PROJECT_ID
      # For postgres:
       #database: production
-    schema: nikkei_225_auto
+    schema: BQ_DATASET
 
       # loaded_at_field: record_loaded_at
     tables:
