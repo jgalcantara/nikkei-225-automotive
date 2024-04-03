@@ -18,7 +18,7 @@ PROJECT_ID = os.environ.get("GCP_PROJECT_ID")
 BUCKET = os.environ.get("GCP_GCS_BUCKET")
 
 path_to_local_home = os.environ.get("AIRFLOW_HOME", "/opt/airflow/")
-BIGQUERY_DATASET = os.environ.get("BIGQUERY_DATASET", 'nikkei_225_auto')
+BIGQUERY_DATASET = os.environ.get("BIGQUERY_DATASET", 'BQ_DATASET')
 
 industry = "Automobiles & Auto parts"
 code_file = "n225_code.parquet"

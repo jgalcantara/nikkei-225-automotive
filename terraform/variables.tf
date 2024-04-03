@@ -7,7 +7,7 @@ variable "credentials" {
 
 variable "project" {
   description = "Project"
-  default     = "steam-form-411714"
+  default     = "<PROJECT_ID>"
 }
 
 variable "region" {
@@ -25,13 +25,13 @@ variable "location" {
 variable "bq_dataset_name" {
   description = "My BigQuery Dataset Name"
   #Update the below to what you want your dataset to be called
-  default     = "nikkei_225_auto"
+  default     = "<BQ_DATASET>"
 }
 
 variable "gcs_bucket_name" {
   description = "My Storage Bucket Name"
   #Update the below to a unique bucket name
-  default     = "nikkei-225-terraform-bucket"
+  default     = "<GCP_GCS_BUCKET>"
 }
 
 variable "gcs_storage_class" {
